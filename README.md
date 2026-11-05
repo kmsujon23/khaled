@@ -14,11 +14,27 @@ Then visit `http://localhost:8080`.
 
 ## Publish on GitHub Pages
 
+### Option 1: GitHub web upload
+
 1. Create a public GitHub repository.
-2. Upload `index.html`, `kms-academic.css` and `kms-academic.js`.
-3. In repository **Settings → Pages**, select **Deploy from a branch**.
-4. Choose the repository's default branch and `/ (root)`, then save.
-5. Your portfolio will be available at `https://USERNAME.github.io/REPOSITORY/`.
+2. Upload all files and folders from this project, preserving the `.github` folder.
+3. Open **Settings → Pages**.
+4. Under **Build and deployment**, select **GitHub Actions**.
+5. Push one commit to the repository's `main` branch, or run the **Deploy portfolio to GitHub Pages** workflow manually.
+6. Your portfolio will be available at `https://USERNAME.github.io/REPOSITORY/`.
+
+### Option 2: Git commands
+
+Run these commands from the project folder:
+
+```powershell
+git init
+git add .
+git commit -m "Create academic portfolio"
+git branch -M main
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+git push -u origin main
+```
 
 ## Embed in Google Sites
 
